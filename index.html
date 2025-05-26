@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthWise Diagnostic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="logo.png" type="image/png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  
+  <main class="container">
+    <section id="homepage">
+      <header>
+        <p>⚠️ For informational purposes only — please seek a doctor's advice for any medical concerns.</p>
+        <h1>Welcome to HealthWise Diagnostic</h1>
+        <p>Your quick tool to check possible health problems based on symptoms.</p>
+      </header>
+      <button id="go-to-checker">👨🏻‍⚕️ Check Health</button>
+    </section>
+
+    <section id="symptom-checker" style="display:none;">
+      <button class="back-button" id="back-to-home">← Back to Home</button>
+      <header>
+        <h1>🩺 HealthWise Diagnostic</h1>
+        <p>Select your symptoms to begin your wellness check.</p>
+      </header>
+
+      <form id="symptom-form">
+        <label for="symptom-select">Select Symptoms:</label>
+        <div id="checkboxes"></div>
+        <button type="submit">🔍 Search</button>
+      </form>
+
+      <section id="result-box" style="display:none;">
+        <h2 id="result">Your report will appear here.</h2>
+        <button id="download-pdf" style="display:none;">📄 Download Report PDF</button>
+        <div class="footer">
+          <p>Made by Raunak Raj</p>
+        </div>
+      </section>
+    </section>
+    
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

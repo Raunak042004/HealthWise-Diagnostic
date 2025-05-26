@@ -1,0 +1,271 @@
+/* raunak */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  margin: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header p:first-child {
+  background: #ff6b6b;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: #4a90e2;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+header p:last-child {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+#go-to-checker {
+  background: linear-gradient(45deg, #4a90e2, #667eea);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  margin: 2rem auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+#go-to-checker:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
+}
+
+#symptom-checker h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  font-weight: 600;
+  color: #4a90e2;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  margin-bottom: 2rem;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.checkbox-item:hover {
+  background-color: #f0f8ff;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  accent-color: #4a90e2;
+}
+
+.checkbox-item label {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  margin: 0 auto;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(40, 167, 69, 0.3);
+}
+
+#result-box {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-left: 5px solid #4a90e2;
+}
+
+#result {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.diagnosis-section {
+  background: white;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin: 0.8rem 0;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.diagnosis-title {
+  color: #4a90e2;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.diagnosis-section p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.diagnosis-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Green styling for specific words */
+.diagnosis-section p strong {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.severity {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.severity.low { background: #d4edda; color: #155724; }
+.severity.medium { background: #fff3cd; color: #856404; }
+.severity.high { background: #f8d7da; color: #721c24; }
+
+#download-pdf {
+  background: linear-gradient(45deg, #dc3545, #fd7e14);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1rem;
+}
+
+#download-pdf:hover {
+  transform: translateY(-2px);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.back-button {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.back-button:hover {
+  background: #5a6268;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #checkboxes {
+    grid-template-columns: 1fr;
+  }
+
+  .diagnosis-section {
+    padding: 0.6rem;
+    margin: 0.6rem 0;
+  }
+
+  .diagnosis-section p {
+    font-size: 0.8rem;
+  }
+
+  .diagnosis-title {
+    font-size: 0.9rem;
+  }
+}
